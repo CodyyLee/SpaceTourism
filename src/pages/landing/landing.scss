@@ -1,0 +1,78 @@
+@import '../../styles/mixins.scss';
+@import '../../styles//fonts.scss';
+@import '../../styles//colors.scss';
+
+.container {
+    background: url('../../assets/home/background-home-mobile.jpg');
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 97px 48% auto;
+    grid-template-areas:
+    '.'
+    'header'
+    'cta';
+    color: #fff;
+
+    .header {
+        grid-area: header;
+        width: 87.2%;
+        height: 49vh;
+        margin:  0 auto;
+        display: grid;
+        grid-template-rows: auto;
+
+        .title {
+            text-align: center;
+            font-family: $barlow-condensed;
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 2.7px;
+            line-height: 1.92rem;
+            color: $light;
+            @include center;
+        }
+
+        .big {
+            margin: 0;
+            font-size: 8rem;
+            font-family: $bellefair;
+            font-weight: 400;
+            color: #fff;
+            @include center;
+            line-height: 10rem;
+        }
+
+        .text {
+            height: 125px;
+            font-family: $barlow;
+            
+            font-size: 1.5rem;
+            color: $light;
+            font-weight: 400;
+            @include center;
+            line-height: 2.5rem;
+        }
+    }
+
+    .actionContainer {
+        grid-area: cta;
+        @include center;
+
+        .cta {
+            width: 40vw;
+            height: 40vw;
+            border-radius: 50%;
+            border: none;
+            font-size: 2rem;
+            font-family: $bellefair;
+            color: $dark;
+            letter-spacing: 1.25px;
+            background: #fff;
+        }
+    }
+}
