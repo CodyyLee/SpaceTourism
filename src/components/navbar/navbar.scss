@@ -2,15 +2,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 12vh;
     z-index: 1;
 
     .logoContainer {
-        width: 20vw;
+        padding: 24px;
+
+        img {
+            width: 40px;
+        }
     }
 
     .navMenu {
-        width: 25vw;
+        padding: 24px;
 
         .menuBtn {
             border: none;

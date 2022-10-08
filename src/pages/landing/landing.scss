@@ -5,6 +5,7 @@
 .container {
     background: url('../../assets/home/background-home-mobile.jpg');
     width: 100vw;
+    filter: contrast(1.05);
     height: 100vh;
     position: absolute;
     top: 0;
@@ -38,7 +39,6 @@
         }
 
         .big {
-            margin: 0;
             font-size: 8rem;
             font-family: $bellefair;
             font-weight: 400;
@@ -50,7 +50,6 @@
         .text {
             height: 125px;
             font-family: $barlow;
-            
             font-size: 1.5rem;
             color: $light;
             font-weight: 400;
@@ -73,6 +72,11 @@
             color: $dark;
             letter-spacing: 1.25px;
             background: #fff;
+            padding-top: 10px;
+
+            &:hover {
+                scale: 1.05;
+            }
         }
     }
 }
