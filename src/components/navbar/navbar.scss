@@ -1,23 +1,67 @@
+@import '../../styles/fonts.scss';
+@import '../../styles/mixins.scss';
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1;
 
+    @media screen and (min-width: 768px) {
+        width: 95%;
+        position: absolute;
+        right: 0;
+    }
+
     .logoContainer {
         padding: 24px;
 
+        @media screen and (min-width: 768px) {
+            padding: 0;
+        }
+
         img {
             width: 40px;
+
+            @media screen and (min-width: 768px) {
+                width: 48px;
+            }
         }
     }
 
     .navMenu {
         padding: 24px;
 
+        @media screen and (min-width: 768px) {
+            padding: 0;
+            height: 96px;
+            width: 60vw;
+            background:  rgba(255, 255, 255, 0.04);
+            @include center;
+        }
+
         .menuBtn {
             border: none;
             background: none;
+        }
+
+        .navLinks {
+            width: 100%;
+            list-style: none;
+            @include center;
+            justify-content: space-evenly;
+
+            li {
+                font-family: $barlow-condensed;
+
+                .link {
+                    color: #fff;
+                    font-size: 1.4rem;
+                    text-decoration: none;
+                    width: 100%;
+                    letter-spacing: 2.36px;
+                }
+            }
         }
     }
 }
