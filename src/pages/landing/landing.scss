@@ -26,6 +26,19 @@
         overflow-y: hidden;
     }
 
+    @media screen and (min-width: 1440px) {
+        background: url('../../assets/home/background-home-desktop.jpg');
+        background-size: cover;
+        grid-template-rows: 40% 4% calc(100% - (51.6% - 90px));
+        grid-template-columns: 25px 40% 15% 45%;
+        overflow-y: hidden;
+        grid-template-areas: 
+        '. . . .'
+        '. . . cta'
+        '. header . cta'
+        ;
+    }
+
     .header {
         grid-area: header;
         width: 87.2%;
@@ -37,6 +50,12 @@
 
         @media screen and (min-width: 768px) {
             width: 58.5vw;
+            height: 32.6vh;
+        }
+
+        @media screen and (min-width: 1440px) {
+            text-align: left;
+            width: 20vw;
             height: 32.6vh;
         }
 
@@ -55,6 +74,14 @@
                 letter-spacing: 3.375px;
                 line-height: 24px;
             }
+
+            @media screen and (min-width: 1440px) {
+                display: block;
+                width: fit-content;
+                font-size: 2.8rem;
+                letter-spacing: 4.725px;
+                line-height: 3.4rem;
+            }
         }
 
         .big {
@@ -68,6 +95,10 @@
             @media screen and (min-width: 768px) {
                 font-size: 15rem;
                 line-height: 15rem;
+            }
+
+            @media screen and (min-width: 1440px) {
+                line-height: 17.2rem;
             }
         }
 
@@ -84,6 +115,11 @@
                 line-height: 2.8rem;
                 width: 444px;
                 height: 112px;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.8rem;
+                line-height: 3.2rem;
             }
         }
     }
@@ -112,6 +148,11 @@
                 letter-spacing: 2px;
                 font-size: 3.2rem;
             }
+
+            @media screen and (min-width: 1440px) {
+                width: 19vw;
+                height: 19vw;
+            }
         }
 
         .cta::before {
@@ -132,6 +173,11 @@
                 width: 31.5vw;
                 height: 31.5vw;
             }
+
+            @media screen and (min-width: 1440px) {
+                width: 19vw;
+                height: 19vw;
+            }
         }
 
         .cta:hover::before {
@@ -141,6 +187,11 @@
             @media screen and (min-width: 768px) {
                 width: 50vw;
                 height: 50vw;
+            }
+
+            @media screen and (min-width: 1440px) {
+                width: 31vw;
+                height: 31vw;
             }
         }
     }    

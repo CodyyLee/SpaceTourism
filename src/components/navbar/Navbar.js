@@ -40,6 +40,8 @@ export default function Navbar() {
             <img src={logo} alt='space logo' />
         </div>
 
+        {width > 1439 ? <hr className='line' /> : null}
+
         <div className='navMenu'>
             {width < 768 ? <button className='menuBtn'>
                 <img src={burger} alt='menu button' />
@@ -52,7 +54,7 @@ export default function Navbar() {
                     }       
                     className='link'
                         to='/'
-                    >HOME</NavLink>
+                    >{width > 1439 ? <span className='number'>00 </span> : ''}HOME</NavLink>
                 </li>
                 <li>
                     <NavLink
@@ -61,7 +63,7 @@ export default function Navbar() {
                     }       
                     className='link'
                         to='/destination'
-                    >DESTINATION</NavLink>
+                    >{width > 1439 ? <span className='number'>01 </span> : ''}DESTINATION</NavLink>
                 </li>
                 <li>
                     <NavLink
@@ -70,7 +72,7 @@ export default function Navbar() {
                     }       
                     className='link'
                         to='/crew'
-                    >CREW</NavLink>
+                    >{width > 1439 ? <span className='number'>02 </span> : ''}CREW</NavLink>
                 </li>
                 <li>
                     <NavLink
@@ -79,7 +81,7 @@ export default function Navbar() {
                     }       
                     className='link'
                         to='/technology'
-                    >TECHNOLOGY</NavLink>
+                    >{width > 1439 ? <span className='number'>03 </span> : ''}TECHNOLOGY</NavLink>
                 </li>
             </ul>}
         </div>
