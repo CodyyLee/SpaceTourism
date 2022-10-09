@@ -4,8 +4,11 @@ import burger from '../../assets/shared/icon-hamburger.svg';
 import './navbar.scss';
 import { NavLink } from 'react-router-dom';
 
+//component import
+import Menu from '../menu/Menu';
 
-export default function Navbar() {
+
+export default function Navbar({menu, setMenu}) {
 
     const [width, setWidth] = useState(window.innerWidth);
 
@@ -29,7 +32,6 @@ export default function Navbar() {
         window.addEventListener('resize', resizeHandler)
 
         return () => {
-            console.log(width)
             window.removeEventListener('resize', resizeHandler);
         }
     }, []);
@@ -43,7 +45,9 @@ export default function Navbar() {
         {width > 1439 ? <hr className='line' /> : null}
 
         <div className='navMenu'>
-            {width < 768 ? <button className='menuBtn'>
+            {width < 768 ? <button className='menuBtn' onClick={() => {
+                setMenu(true);
+            }}>
                 <img src={burger} alt='menu button' />
             </button> : 
             <ul className='navLinks'>
@@ -53,7 +57,8 @@ export default function Navbar() {
                         isActive ? activeStyle : null
                     }       
                     className='link'
-                        to='/'
+                    to='/'
+                    end
                     >{width > 1439 ? <span className='number'>00 </span> : ''}HOME</NavLink>
                 </li>
                 <li>

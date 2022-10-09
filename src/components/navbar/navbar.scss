@@ -76,12 +76,12 @@
 
             li {
                 font-family: $barlow-condensed;
+                position: relative;
 
                 .link {
                     color: #fff;
                     font-size: 1.4rem;
                     text-decoration: none;
-                    width: 100%;
                     letter-spacing: 2.36px;
 
                     .number {
@@ -92,6 +92,20 @@
                         line-height: 19.2px;
                     }
                 }
+            }
+
+            li::after {
+                content: ''
+            }
+
+            li:hover::after {
+                padding: 1.5px 0;
+                width: 100%;
+                position: absolute;
+                bottom: calc((-96px / 2) + 11.2px);
+                left: 0;
+                background: #fff;
+                opacity: .5;
             }
         }
     }

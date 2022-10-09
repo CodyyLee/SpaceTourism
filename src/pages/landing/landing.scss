@@ -30,7 +30,7 @@
         background: url('../../assets/home/background-home-desktop.jpg');
         background-size: cover;
         grid-template-rows: 40% 4% calc(100% - (51.6% - 90px));
-        grid-template-columns: 25px 40% 15% 45%;
+        grid-template-columns: 25px 40% calc(15% - 25px) 45%;
         overflow-y: hidden;
         grid-template-areas: 
         '. . . .'
