@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
 
-    const [width, setWidth] = useState();
+    const [width, setWidth] = useState(window.innerWidth);
 
     let activeStyle = {
         textDecoration: 'underline',
@@ -29,6 +29,7 @@ export default function Navbar() {
         window.addEventListener('resize', resizeHandler)
 
         return () => {
+            console.log(width)
             window.removeEventListener('resize', resizeHandler);
         }
     }, []);

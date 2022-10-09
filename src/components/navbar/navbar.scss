@@ -38,6 +38,8 @@
             width: 60vw;
             background:  rgba(255, 255, 255, 0.04);
             @include center;
+            backdrop-filter: blur(40.8px);
+            -webkit-backdrop-filter: blur(40.8px);
         }
 
         .menuBtn {

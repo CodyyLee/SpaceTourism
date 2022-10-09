@@ -6,7 +6,6 @@
     background: url('../../assets/home/background-home-mobile.jpg');
     background-size: cover;
     width: 100vw;
-    filter: contrast(1.05);
     height: 100vh;
     position: absolute;
     top: 0;
@@ -92,6 +91,7 @@
     .actionContainer {
         grid-area: cta;
         @include center;
+        position: relative;
 
         .cta {
             width: 40vw;
@@ -112,10 +112,36 @@
                 letter-spacing: 2px;
                 font-size: 3.2rem;
             }
+        }
 
-            &:hover {
-                scale: 1.05;
+        .cta::before {
+            content: '';
+            width: 40vw;
+            height: 40vw;
+            border-radius: 50%;
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.1;
+            transition: .1s;
+            z-index: -1;
+    
+            @media screen and (min-width: 768px) {
+                width: 31.5vw;
+                height: 31.5vw;
             }
         }
-    }
+
+        .cta:hover::before {
+            width: 60vw;
+            height: 60vw;
+
+            @media screen and (min-width: 768px) {
+                width: 50vw;
+                height: 50vw;
+            }
+        }
+    }    
 }
