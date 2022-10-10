@@ -71,6 +71,11 @@
             @include center;
             justify-content: space-evenly;
 
+            @media screen and (min-width: 768px) {
+                width: 76%;
+                justify-content: space-between;
+            }
+
             @media screen and (min-width: 1440px) {
                 margin-right: 7.5%;
             }
