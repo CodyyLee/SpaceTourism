@@ -19,7 +19,7 @@ const {store, setStore} = useContext(AppContext);
             <div className='optionsContainer'>
                 {data.destinations.map((dest, i) => {
                     return (
-                        <button id={i} style={{borderBottom: store.destination === i ? '3px solid white' : 'none'}} className='option'
+                        <button id={i} style={{borderBottom: store.destination === i ? '3px solid white' : 'none', color: store.destination === i ? 'white' : '#d0d6f9'}} className='option'
                         onClick={() => {
                             setStore({...store, destination: i})
                         }}>
@@ -34,12 +34,10 @@ const {store, setStore} = useContext(AppContext);
         </div>
 
         <div className='facts'>
-            {/* distance */}
             <div className='distance'>
                 <h3 className='factsTitle'>AVG. DISTANCE</h3>
                 <p className='fact'>{data.destinations[store.destination].distance}</p>
             </div>
-            {/* travel time */}
             <div className='travel'>
                 <h3 className='factsTitle'>EST. TRAVEL TIME</h3>
                 <p className='fact'>{data.destinations[store.destination].travel}</p>

@@ -17,27 +17,53 @@
         'facts'
     ;
 
+    @media screen and (min-width: 768px) {
+        grid-template-rows: 136px repeat(3, auto);
+    }
+
     .header {
         grid-area: header;
         margin-bottom: 26px;
 
-        .title {
-            font-size: 1.6rem;
-            color: #fff;
-            font-family: $barlow-condensed;
-            margin-bottom: 32px;
-            letter-spacing: 2.7px;
+        .titleContainer {
 
-            .number {
+            @media screen and (min-width: 768px) {
+                display: flex;
+                justify-content: flex-start;
+                margin-left: 38.5px;
+            }
+
+            .title {
                 font-size: 1.6rem;
-                padding-right: 18px;
-                opacity: .5;
+                color: #fff;
+                font-family: $barlow-condensed;
+                margin-bottom: 32px;
+                letter-spacing: 2.7px;
+    
+                @media screen and (min-width: 768px) {
+                    font-size: 2rem;
+                    letter-spacing: 3.38px;
+                }
+    
+                .number {
+                    font-size: 1.6rem;
+                    padding-right: 18px;
+                    opacity: .5;
+    
+                    @media screen and (min-width: 768px) {
+                        font-size: 2rem;
+                    }
+                }
             }
         }
 
         .image {
             width: 40%;
             rotate: 12deg;
+
+            @media screen and (min-width: 768px) {
+                margin-top: 35px;
+            }
         }
     }
 
@@ -46,6 +72,10 @@
         min-height: 310px;
         position: relative;
 
+        @media screen and (min-width: 768px) {
+            height: 315px;
+        }
+
         .optionsContainer {
             width: 80%;
             display: flex;
@@ -53,14 +83,24 @@
             margin: auto;
             margin-bottom: 26px;
 
+            @media screen and (min-width: 768px) {
+                width: 37.17%;
+                justify-content: space-between;
+                margin-bottom: 32px;
+            }
+
             .option {
                 background: none;
                 border: none;
-                color: #fff;
                 font-size: 1.4rem;
                 font-family: $barlow-condensed;
                 letter-spacing: 2.36px;
                 padding-bottom: 8px;
+
+                @media screen and (min-width: 768px) {
+                    letter-spacing: 2.7px;
+                    font-size: 1.6rem;
+                }
             }
         }
 
@@ -69,6 +109,10 @@
             color: #fff;
             font-family: $bellefair;
             font-weight: 400;
+
+            @media screen and (min-width: 768px) {
+                font-size: 8rem;
+            }
         }
 
         .description {
@@ -78,6 +122,12 @@
             margin: auto;
             line-height: 2.5rem;
             font-family: $barlow;
+
+            @media screen and (min-width: 768px) {
+                width: 74.61%;
+                font-size: 1.6rem;
+                line-height: 2.8rem;
+            }
         }
 
         .line {
@@ -89,6 +139,10 @@
             left: 50%;
             bottom: 0;
             transform: translateX(-50%);
+
+            @media screen and (min-width: 768px) {
+                bottom: 0%;
+            }
         }
     }
 
@@ -96,8 +150,22 @@
         grid-area: facts;
         margin-bottom: 58px;
 
+        @media screen and (min-width: 768px) {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 74.61%;
+            margin-top: -30px;
+            padding-bottom: 30px;
+        }
+
         .distance {
             margin-bottom: 32px;
+
+            @media screen and (min-width: 768px) {
+                margin: 0;
+            }
         }
 
         .distance,
