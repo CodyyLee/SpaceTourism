@@ -6,16 +6,29 @@ import { useState } from 'react';
 import Navbar from './components/navbar/Navbar';
 import Menu from './components/menu/Menu';
 
+//context import
+import { AppContext } from './context';
+
 function App() {
 
-  const [menu, setMenu] = useState(false);
+  const [store, setStore] = useState({
+    menu: false,
+    destination: 0,
+    crew: 0,
+    technology: 0,
+    close: () => {
+      setStore({...store, menu: false})
+    }
+  });
 
   return (
-    <div className="App">
-      <Navbar menu={menu} setMenu={setMenu} />
-      <Menu setMenu={setMenu} menu={menu} />
-      <Outlet />
-    </div>
+    <AppContext.Provider value={{store, setStore}}>
+      <div className="App">
+        <Navbar />
+        <Menu />
+        <Outlet />
+      </div>
+    </AppContext.Provider>
   );
 }
 

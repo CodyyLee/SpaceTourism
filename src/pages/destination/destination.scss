@@ -1,0 +1,123 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+
+.destContainer {
+    background: url('../../assets/destination/background-destination-mobile.jpg');
+    background-size: cover;
+    width: 100vw;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    display: grid;
+    grid-template-rows: 88px repeat(3, auto);
+    grid-template-areas: 
+        '.'
+        'header'
+        'content'
+        'facts'
+    ;
+
+    .header {
+        grid-area: header;
+        margin-bottom: 26px;
+
+        .title {
+            font-size: 1.6rem;
+            color: #fff;
+            font-family: $barlow-condensed;
+            margin-bottom: 32px;
+            letter-spacing: 2.7px;
+
+            .number {
+                font-size: 1.6rem;
+                padding-right: 18px;
+                opacity: .5;
+            }
+        }
+
+        .image {
+            width: 40%;
+            rotate: 12deg;
+        }
+    }
+
+    .content {
+        grid-area: content;
+        min-height: 310px;
+        position: relative;
+
+        .optionsContainer {
+            width: 80%;
+            display: flex;
+            justify-content: space-evenly;
+            margin: auto;
+            margin-bottom: 26px;
+
+            .option {
+                background: none;
+                border: none;
+                color: #fff;
+                font-size: 1.4rem;
+                font-family: $barlow-condensed;
+                letter-spacing: 2.36px;
+                padding-bottom: 8px;
+            }
+        }
+
+        .name {
+            font-size: 5.6rem;
+            color: #fff;
+            font-family: $bellefair;
+            font-weight: 400;
+        }
+
+        .description {
+            font-size: 1.5rem;
+            color: $light;
+            width: 85%;
+            margin: auto;
+            line-height: 2.5rem;
+            font-family: $barlow;
+        }
+
+        .line {
+            width: 85%;
+            height: 1px;
+            border-color: #383B4B;
+            margin: 32px auto;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+        }
+    }
+
+    .facts {
+        grid-area: facts;
+        margin-bottom: 58px;
+
+        .distance {
+            margin-bottom: 32px;
+        }
+
+        .distance,
+        .travel {
+            color: #fff;
+
+            .factsTitle {
+                font-size: 1.4rem;
+                color: $light;
+                font-family: $barlow-condensed;
+                font-weight: 400;
+                letter-spacing: 2.36px;
+                margin-bottom: 12px;
+            }
+
+            .fact {
+                font-size: 2.8rem;
+                font-family: $bellefair;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

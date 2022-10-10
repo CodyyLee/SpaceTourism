@@ -1,7 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './landing.scss';
 
 export default function Landing() {
+
+  const navigate = useNavigate();
+
   return (
     <div className='container'>
         <div className='header'>
@@ -14,7 +18,9 @@ export default function Landing() {
         </div>
 
         <div className='actionContainer'>
-            <button className='cta'>
+            <button className='cta' onClick={() => {
+              navigate('/destination')
+            }}>
                 EXPLORE
             </button>
         </div>

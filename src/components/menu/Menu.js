@@ -1,32 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import close from '../../assets/shared/icon-close.svg';
 import './menu.scss';
 
-export default function Menu({ setMenu, menu }) {
+import { AppContext } from '../../context';
+
+export default function Menu() {
+
+    const { store } = useContext(AppContext);
 
   return (
-    <div className='menuContainer' style={{right: menu ? '0' : '-300px'}}>
-        <button className='closeBtn' onClick={() => {
-            setMenu(false);
-        }}>
+    <div className='menuContainer' style={{right: store.menu ? '0' : '-300px'}}>
+        <button className='closeBtn' onClick={store.close}>
             <img className='close' src={close} alt='close menu' />
         </button>
         <ul className='navLinks'>
             <li>
-                <NavLink to='/' className='link' end><span className='number'>00 </span>HOME</NavLink>
+                <NavLink to='/'  onClick={store.close} className='link' end><span className='number'>00 </span>HOME</NavLink>
                 
             </li>
             <li>
-                <NavLink to='/destination' className='link'><span className='number'>01 </span>DESTINATION</NavLink>
+                <NavLink to='/destination'  onClick={store.close} className='link'><span className='number'>01 </span>DESTINATION</NavLink>
                 
             </li>
             <li>
-                <NavLink to='/crew' className='link'><span className='number'>02 </span>CREW</NavLink>
+                <NavLink to='/crew'  onClick={store.close} className='link'><span className='number'>02 </span>CREW</NavLink>
                 
             </li>
             <li>
-                <NavLink to='/technology' className='link'><span className='number'>03 </span>TECHNOLOGY</NavLink>
+                <NavLink to='/technology'  onClick={store.close} className='link'><span className='number'>03 </span>TECHNOLOGY</NavLink>
                 
             </li>
         </ul>

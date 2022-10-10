@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import logo from '../../assets/shared/logo.svg';
 import burger from '../../assets/shared/icon-hamburger.svg';
 import './navbar.scss';
 import { NavLink } from 'react-router-dom';
 
-//component import
-import Menu from '../menu/Menu';
+import {AppContext} from '../../context';
 
-
-export default function Navbar({menu, setMenu}) {
+export default function Navbar() {
 
     const [width, setWidth] = useState(window.innerWidth);
+    const {store, setStore } = useContext(AppContext);
 
     let activeStyle = {
         textDecoration: 'underline',
@@ -46,7 +45,7 @@ export default function Navbar({menu, setMenu}) {
 
         <div className='navMenu'>
             {width < 768 ? <button className='menuBtn' onClick={() => {
-                setMenu(true);
+                setStore({...store, menu: true});
             }}>
                 <img src={burger} alt='menu button' />
             </button> : 
