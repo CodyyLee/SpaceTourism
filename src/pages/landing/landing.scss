@@ -1,0 +1,198 @@
+@import '../../styles/mixins.scss';
+@import '../../styles//fonts.scss';
+@import '../../styles//colors.scss';
+
+.container {
+    background: url('../../assets/home/background-home-mobile.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 97px 48% auto;
+    grid-template-areas:
+    '.'
+    'header'
+    'cta';
+    color: #fff;
+
+    @media screen and (min-width: 768px) {
+        background: url('../../assets/home/background-home-tablet.jpg');
+        background-size: cover;
+        grid-template-rows: 19% 32.6% calc(100% - (51.6% - 90px));
+        overflow-y: hidden;
+    }
+
+    @media screen and (min-width: 1440px) {
+        background: url('../../assets/home/background-home-desktop.jpg');
+        background-size: cover;
+        grid-template-rows: 40% 4% calc(100% - (51.6% - 90px));
+        grid-template-columns: 25px 40% calc(15% - 25px) 45%;
+        overflow-y: hidden;
+        grid-template-areas: 
+        '. . . .'
+        '. . . cta'
+        '. header . cta'
+        ;
+    }
+
+    .header {
+        grid-area: header;
+        width: 87.2%;
+        height: 49vh;
+        margin:  0 auto;
+        display: grid;
+        grid-template-rows: auto;
+        gap: 5%;
+
+        @media screen and (min-width: 768px) {
+            width: 58.5vw;
+            height: 32.6vh;
+        }
+
+        @media screen and (min-width: 1440px) {
+            text-align: left;
+            width: 20vw;
+            height: 32.6vh;
+        }
+
+        .title {
+            text-align: center;
+            font-family: $barlow-condensed;
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 2.7px;
+            line-height: 1.92rem;
+            color: $light;
+            @include center;
+
+            @media screen and (min-width: 768px) {
+                font-size: 2rem;
+                letter-spacing: 3.375px;
+                line-height: 24px;
+            }
+
+            @media screen and (min-width: 1440px) {
+                display: block;
+                width: fit-content;
+                font-size: 2.8rem;
+                letter-spacing: 4.725px;
+                line-height: 3.4rem;
+            }
+        }
+
+        .big {
+            font-size: 8rem;
+            font-family: $bellefair;
+            font-weight: 400;
+            color: #fff;
+            @include center;
+            line-height: 10rem;
+
+            @media screen and (min-width: 768px) {
+                font-size: 15rem;
+                line-height: 15rem;
+            }
+
+            @media screen and (min-width: 1440px) {
+                line-height: 17.2rem;
+            }
+        }
+
+        .text {
+            height: 125px;
+            font-family: $barlow;
+            font-size: 1.5rem;
+            color: $light;
+            font-weight: 400;
+            @include center;
+            line-height: 2.5rem;
+
+            @media screen and (min-width: 768px) {
+                line-height: 2.8rem;
+                width: 444px;
+                height: 112px;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.8rem;
+                line-height: 3.2rem;
+            }
+        }
+    }
+
+    .actionContainer {
+        grid-area: cta;
+        @include center;
+        position: relative;
+
+        .cta {
+            width: 40vw;
+            height: 40vw;
+            border-radius: 50%;
+            border: none;
+            font-size: 2rem;
+            font-family: $bellefair;
+            color: $dark;
+            letter-spacing: 1.25px;
+            background: #fff;
+            padding-top: 10px;
+            transition: 0.1s;
+
+            @media screen and (min-width: 768px) {
+                width: 31.5vw;
+                height: 31.5vw;
+                letter-spacing: 2px;
+                font-size: 3.2rem;
+            }
+
+            @media screen and (min-width: 1440px) {
+                width: 19vw;
+                height: 19vw;
+            }
+        }
+
+        .cta::before {
+            content: '';
+            width: 40vw;
+            height: 40vw;
+            border-radius: 50%;
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.1;
+            transition: .1s;
+            z-index: -1;
+    
+            @media screen and (min-width: 768px) {
+                width: 31.5vw;
+                height: 31.5vw;
+            }
+
+            @media screen and (min-width: 1440px) {
+                width: 19vw;
+                height: 19vw;
+            }
+        }
+
+        .cta:hover::before {
+            width: 60vw;
+            height: 60vw;
+
+            @media screen and (min-width: 768px) {
+                width: 50vw;
+                height: 50vw;
+            }
+
+            @media screen and (min-width: 1440px) {
+                width: 31vw;
+                height: 31vw;
+            }
+        }
+    }    
+}
