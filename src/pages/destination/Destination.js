@@ -19,7 +19,7 @@ const {store, setStore} = useContext(AppContext);
             <div className='optionsContainer'>
                 {data.destinations.map((dest, i) => {
                     return (
-                        <button id={i} style={{borderBottom: store.destination === i ? '3px solid white' : 'none', color: store.destination === i ? 'white' : '#d0d6f9'}} className='option'
+                        <button key={`planetOption${i}`} id={i} style={{borderBottom: store.destination === i ? '3px solid white' : 'none', color: store.destination === i ? 'white' : '#d0d6f9'}} className='option'
                         onClick={() => {
                             setStore({...store, destination: i})
                         }}>
