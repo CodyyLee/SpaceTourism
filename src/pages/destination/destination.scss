@@ -120,6 +120,10 @@
             }
         }
 
+        @media screen and (min-width: 1461px) {
+            
+        }
+
         .optionsContainer {
             width: 80%;
             display: flex;
@@ -188,8 +192,9 @@
                 margin: 0;
                 text-align: left;
                 width: 100%;
-                font-size: 1.8rem;
+                font-size: 1.82rem;
                 line-height: 3.2rem;
+                // min-height: 164px;
             }
         }
 
