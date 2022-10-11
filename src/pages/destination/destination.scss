@@ -26,6 +26,7 @@
         background: url('../../assets/destination/background-destination-desktop.jpg');
         grid-template-rows: 212px auto 218px;
         grid-template-columns: 58% 32%;
+        background-size: cover;
         grid-template-areas: 
             '. .'
             'header content'
