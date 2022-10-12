@@ -1,0 +1,110 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+
+.crewContainer {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        '.'
+        'header'
+        'image'
+        'content'
+        '.'
+    ;
+    background-image: url('../../assets/crew/background-crew-mobile.jpg');
+    background-size: 104%;
+    background-color: #0B0D17;
+    background-blend-mode: luminosity;
+    grid-template-rows: 88px 51px repeat(2, auto);
+
+    .title {
+        grid-area: header;
+        color: #fff;
+        text-align: center;
+        width: 100vw;
+        font-family: $barlow-condensed;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 2.7px;
+
+        .number {
+            opacity: .25;
+            font-size: 1.6rem;
+            letter-spacing: 2.7px;
+            font-weight: 700;
+            padding-right: 1.6rem;
+        }
+    }
+
+    .imageContainer {
+        width: 87.2%;
+        grid-area: image;
+        border-bottom: 1px solid #383B4B;
+        margin: auto;
+        height: 223px;
+
+        .crewImage {
+            margin: auto;
+            height: 100%;
+            margin-bottom: -2px;
+        }
+    }
+
+    .content {
+        grid-area: content;
+
+        .navigationContainer {
+            width: 88px;
+            margin: 32px auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .navBtn {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: none;
+            }
+        }
+
+        .nameContainer {
+            margin-bottom: 16px;
+
+            .role {
+                font-family: $bellefair;
+                font-size: 1.6rem;
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: 400;
+                opacity: .5;
+                line-height: 18px;
+                margin-bottom: 8px;
+            }
+
+            .name {
+                font-family: $bellefair;
+                font-size: 2.4rem;
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: 400;
+                line-height: 28px;
+            }
+        }
+
+        .bio {
+            font-family: $barlow;
+            font-size: 1.51rem;
+            line-height: 25px;
+            color: $light;
+            font-weight: 400;
+            margin: auto;
+            width: 88%;
+            min-height: 150px;
+        }
+    }
+}

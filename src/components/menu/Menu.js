@@ -10,7 +10,7 @@ export default function Menu() {
     const { store } = useContext(AppContext);
 
   return (
-    <div className='menuContainer' style={{right: store.menu ? '0' : '-300px'}}>
+    <div className='menuContainer' style={{right: store.menu ? '0' : '-100vw'}}>
         <button className='closeBtn' onClick={store.close}>
             <img className='close' src={close} alt='close menu' />
         </button>
