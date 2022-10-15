@@ -52,7 +52,7 @@ export default function Technology() {
 
         <div className='textContainer'>
           <div className='titleContainer'>
-            <h3 className='textSubheader'>The Terminology ...</h3>
+            <h3 className='textSubheader'>The Terminology<span className='dots'>...</span></h3>
             <h2 className='contentTitle'>{data.technology[store.technology].name}</h2>
           </div>
           

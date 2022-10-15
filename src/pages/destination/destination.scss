@@ -147,6 +147,10 @@
                 letter-spacing: 2.36px;
                 padding-bottom: 8px;
 
+                &:hover {
+                    border-bottom: 3px solid rgba(255, 255, 255, 0.25) !important;
+                }
+
                 @media screen and (min-width: 768px) {
                     letter-spacing: 2.7px;
                     font-size: 1.6rem;
