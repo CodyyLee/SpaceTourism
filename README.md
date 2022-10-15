@@ -54,4 +54,4 @@ Moving forward, I'm going to rethink the way that I do styling. I am confident t
 ## Author
 
 - GitHub - [CodyyLee](https://github.com/CodyyLee)
-- Frontend Mentor - [@CodyyLee](https://www.frontendmentor.io/profile/CodyyLee)If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@CodyyLee](https://www.frontendmentor.io/profile/CodyyLee)
